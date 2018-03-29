@@ -24,8 +24,9 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
-    "css-loader": "^0.28.11",
     "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.11",
     "eslint": "^4.19.1",
     "eslint-config-google": "^0.9.1",
     "eslint-config-kentcdodds": "^13.0.1",
@@ -49,5 +50,7 @@
     "webpack-cli": "^2.0.13",
     "webpack-dev-server": "^3.1.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "moment": "^2.21.0"
+  }
 }
