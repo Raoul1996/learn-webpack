@@ -9,7 +9,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.[hash].js'
+    filename: 'bundle.[hash].js',
+    publicPath: '/'
   },
   module: {
     rules: [{
@@ -71,11 +72,11 @@ module.exports = {
       identifier: 'module'
     }),
     // 移除 moment 中的 i18n 代码，优化大小
-    // new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     new HtmlWebPackPlugin({
       filename: 'index.html',
       template: 'index.html',
-      favicon: path.resolve(__dirname, 'favicon.ico')
+      favicon: path.resolve(__dirname, '../favicon.ico')
     }),
     new CleanWebpackPlugin(['dist']),
     new ExtractTextPlugin({
@@ -83,8 +84,8 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       {
-        from: path.resolve(__dirname, 'static'),
-        to: path.resolve(__dirname, 'dist/static'),
+        from: path.resolve(__dirname, '../static'),
+        to: path.resolve(__dirname, '../dist/static'),
         ignore: ['.*']
       }
     ]),

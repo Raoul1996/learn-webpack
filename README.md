@@ -32,8 +32,11 @@
 
 
 ### 打包优化
-1. 使用 `webpack.IgnorePlugin` 优化 `moment` 插件的打包
+
+- 使用 `webpack.IgnorePlugin` 优化 `moment` 插件的打包
 
 文件名    |使用前 | 使用后
 ---------|------|------
-bundle.js|222Kib|51.3KiB
+bundle.js|222KiB|51.3KiB
+
+- 拆分配置文件
