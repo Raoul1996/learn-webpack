@@ -1,13 +1,13 @@
 const {smart} = require('webpack-merge')
 const webpack = require('webpack')
-const base = require('./webpack.base.conf')
+const base = require('./webpack.base')
 module.exports = smart(base, {
   module: {
     rules: [
-      {
-        test: /\.js$/,
-        use: ['babel-loader']
-      }
+      // {
+      //   test: /\.js$/,
+      //   use: ['babel-loader']
+      // }
     ]
   },
   devServer: {
