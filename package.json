@@ -6,7 +6,9 @@
   "scripts": {
     "build": "NODE_ENV=production webpack --mode production --config webpack.production.js",
     "build:base": "NODE_ENV=production webpack --mode production --config webpack.base.js",
-    "start": "NODE_ENV=development webpack-dev-server --mode development --config webpack.development.js"
+    "start": "NODE_ENV=development webpack-dev-server --mode development --config webpack.development.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -57,6 +59,8 @@
   },
   "dependencies": {
     "lodash": "^4.17.5",
-    "moment": "^2.21.0"
-  }
+    "moment": "^2.21.0",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
